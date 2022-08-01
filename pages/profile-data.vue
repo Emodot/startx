@@ -134,6 +134,323 @@
             </div>
           </div>
         </div>
+        <!-- Social Media Information -->
+        <div class="personal">
+          <p class="content-title">
+            Social Media Information
+          </p>
+          <hr class="content-line">
+          <div class="row-ctn">
+            <div class="box">
+              <p class="box-title">
+                Instagram
+              </p>
+              <p class="box-text">
+                @emayedavid
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Twitter
+              </p>
+              <p class="box-text">
+                @davidemaye
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                LinkedIn
+              </p>
+              <p class="box-text">
+                David Emaye
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Facebook
+              </p>
+              <p class="box-text">
+                Emaye David
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Business Information - Educational Information -->
+        <div class="personal">
+          <p class="content-title">
+            Business Information - Educational Information
+          </p>
+          <hr class="content-line">
+          <div class="row-ctn">
+            <div class="box">
+              <p class="box-title">
+                Institution Name
+              </p>
+              <p class="box-text">
+                Ondo State University of Science and Technology
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Started
+              </p>
+              <p class="box-text">
+                15th, May 2008
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Ended
+              </p>
+              <p class="box-text">
+                15th, May 2010
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Degree
+              </p>
+              <p class="box-text">
+                B-Tech
+              </p>
+            </div>
+          </div>
+          <div class="row-ctn">
+            <div class="box">
+              <p class="box-title">
+                Institution Name
+              </p>
+              <p class="box-text">
+                Ondo State University of Science and Technology
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Started
+              </p>
+              <p class="box-text">
+                15th, May 2008
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Ended
+              </p>
+              <p class="box-text">
+                15th, May 2010
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Degree
+              </p>
+              <p class="box-text">
+                B-Tech
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Business Information - Coporate Experience -->
+        <div class="personal">
+          <p class="content-title">
+            Business Information - Coporate Experience
+          </p>
+          <hr class="content-line">
+          <div class="row-ctn">
+            <div class="box">
+              <p class="box-title">
+                Comapny Name
+              </p>
+              <p class="box-text">
+                Acumen Digital
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Started
+              </p>
+              <p class="box-text">
+                15th, May 2008
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Ended
+              </p>
+              <p class="box-text">
+                15th, May 2010
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Position
+              </p>
+              <p class="box-text">
+                Software Engineer
+              </p>
+            </div>
+          </div>
+          <div class="row-ctn">
+            <div class="box">
+              <p class="box-title">
+                Comapny Name
+              </p>
+              <p class="box-text">
+                Acumen Digital
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Started
+              </p>
+              <p class="box-text">
+                15th, May 2008
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Date Ended
+              </p>
+              <p class="box-text">
+                15th, May 2010
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Position
+              </p>
+              <p class="box-text">
+                Software Engineer
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Business Information - Licenses & certifications -->
+        <div class="personal">
+          <p class="content-title">
+            Business Information - Licenses &amp; certifications
+          </p>
+          <hr class="content-line">
+          <div class="row-ctn">
+            <div class="box">
+              <p class="box-title">
+                Name
+              </p>
+              <p class="box-text">
+                The Fundamentals of Digital Marketing
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Issuing Organization
+              </p>
+              <p class="box-text">
+                Google
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Issue Date
+              </p>
+              <p class="box-text">
+                15th, May 2010
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Certificate ID
+              </p>
+              <p class="box-text">
+                HDJF8IO3K39
+              </p>
+            </div>
+          </div>
+          <div class="box-ex">
+            <p class="box-title">
+              Credential URL
+            </p>
+            <p class="box-text">
+              https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing
+            </p>
+          </div>
+          <div class="row-ctn">
+            <div class="box">
+              <p class="box-title">
+                Name
+              </p>
+              <p class="box-text">
+                The Fundamentals of Digital Marketing
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Issuing Organization
+              </p>
+              <p class="box-text">
+                Google
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Issue Date
+              </p>
+              <p class="box-text">
+                15th, May 2010
+              </p>
+            </div>
+            <div class="box">
+              <p class="box-title">
+                Certificate ID
+              </p>
+              <p class="box-text">
+                HDJF8IO3K39
+              </p>
+            </div>
+          </div>
+          <div class="box-ex">
+            <p class="box-title">
+              Credential URL
+            </p>
+            <p class="box-text">
+              https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing
+            </p>
+          </div>
+        </div>
+        <!-- Other Information -->
+        <div class="personal">
+          <p class="content-title">
+            Other Information
+          </p>
+          <hr class="content-line">
+          <div class="row-ctn">
+            <div class="box-ot">
+              <p class="box-title">
+                Skills
+              </p>
+              <p class="box-text">
+                Ipsum, Dolor, sit, amet, consectetur, lorem
+              </p>
+            </div>
+            <div class="box-ot">
+              <p class="box-title">
+                Hobbies
+              </p>
+              <p class="box-text">
+                Ipsum, Dolor, sit, amet, consectetur, lorem
+              </p>
+            </div>
+          </div>
+          <div class="row-ctn">
+            <div class="box-su">
+              <p class="box-title">
+                Summary About You
+              </p>
+              <p class="box-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce arcu tortor, porta quis cursus id, ultrices a erat. Ut lobortis, nisl nec tempor maximus, lacus enim condimentum lorem, eu hendrerit quam dui ac nulla. Fusce vitae tortor pulvinar, mattis eros et, congue tellus. Nullam eget iaculis libero. Nulla odio ligula, ornare varius gravida malesuada, sollicitudin eu urna. Fusce ultricies nunc tortor, ut finibus leo fringilla ut. Nunc nec lacinia purus, vel
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -203,7 +520,7 @@ export default {
   border: none;
   border-top: 1px solid #E7E7E7;
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .row-ctn {
@@ -216,6 +533,20 @@ export default {
   padding-right: 20px;
 }
 
+.box-ot {
+  flex-basis: 50%;
+  padding-right: 20px;
+}
+
+.box-su {
+  flex-basis: 100%;
+  padding-right: 20px;
+}
+
+.box-ex {
+  margin-bottom: 30px;
+}
+
 .box-title {
   font-size: 13px;
   color: #75759E;
@@ -224,6 +555,7 @@ export default {
 .box-text {
   /* font-weight: 13px; */
   margin-top: 10px;
+  line-height: 20px;
   color: #000000;
 }
 </style>
