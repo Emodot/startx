@@ -108,6 +108,7 @@ export default {
   padding: 0 70px;
   position: fixed;
   width: 100vw;
+  border-bottom: 1px solid #1010101d;
 }
 
 .logo img {
