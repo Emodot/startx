@@ -9,7 +9,7 @@
           @openLogout="openLogout = true"
         />
       </div>
-      <div class="mobile-menu">
+      <div class="mobile-menu come-down">
         <MobileMenu
           v-show="showMobileMenu"
           @closeMobileMenu="showMobileMenu = false"
@@ -112,9 +112,9 @@ html {
 }
 
 .main-content {
-  margin-top: 9vh;
-  margin-left: 18vw;
-  width: 82vw;
+  margin-top: 100px;
+  /* margin-left: 18vw; */
+  width: 100vw;
 }
 
 .add-new-contact {

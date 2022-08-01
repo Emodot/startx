@@ -64,7 +64,7 @@
       <!-- <div class="user-image" @click="$router.push('/account')">
           <img src="~assets/images/user-image.png" alt="">
         </div> -->
-      <p class="username" @click="$emit('openLogout')">
+      <p class="username">
         {{ username }}
       </p>
       <svg
@@ -176,6 +176,9 @@ a:hover svg path {
 }
 
 @media screen and (max-width: 600px) {
+  .user {
+    display: none;
+  }
   .container {
     padding: 0 30px;
   }
