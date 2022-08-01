@@ -64,7 +64,7 @@
       <!-- <div class="user-image" @click="$router.push('/account')">
           <img src="~assets/images/user-image.png" alt="">
         </div> -->
-      <p class="username">
+      <p class="username" @click="$router.push('/settings')">
         {{ username }}
       </p>
       <svg

@@ -132,6 +132,11 @@ export default {
   font-weight: 500;
 }
 
+.new {
+  color: #008A27;
+  font-style: italic;
+}
+
 hr {
   border: none;
   border-top: 1px solid #E7E8F2;
