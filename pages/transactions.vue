@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p class="page-title">
-      DASHBOARD
+      TRANSACTIONS
     </p>
     <hr class="grey-line">
     <div class="inner">
