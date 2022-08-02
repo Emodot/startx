@@ -58,12 +58,14 @@
             </p>
             <input id="" v-model="phonenumber" type="text" name="phonenumber">
           </div>
-          <button v-if="acctLoading">
-            <Loader />
-          </button>
-          <button v-else @click="changeAcctDetails()">
-            Save Changes
-          </button>
+          <div class="btn">
+            <button v-if="acctLoading">
+              <Loader />
+            </button>
+            <button v-else @click="changeAcctDetails()">
+              Save Changes
+            </button>
+          </div>
         </div>
       </div>
       <div v-if="activeTab == 'security'" class="tab-1">
@@ -107,12 +109,14 @@
               </p>
             </div>
           </div>
-          <button v-if="secLoading">
-            <Loader />
-          </button>
-          <button v-else @click="changePassword()">
-            Save Changes
-          </button>
+          <div class="btn">
+            <button v-if="secLoading">
+              <Loader />
+            </button>
+            <button v-else @click="changePassword()">
+              Save Changes
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -188,6 +192,7 @@ export default {
   color: #de0000;
   font-size: 17px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .inner {
@@ -195,11 +200,16 @@ export default {
   margin: auto;
 }
 
+.inner .active {
+  color: #5C07A3 !important;
+  border-bottom: 3px solid #5C07A3;
+}
+
 .inner-tab {
   display: flex;
 }
 
-.tabs-container .tab{
+.inner .tab{
   padding: 15px;
   cursor: pointer;
   margin-right: 70px;
@@ -221,7 +231,7 @@ export default {
   color: #414B58;
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   line-height: 25px;
 }
 
@@ -237,11 +247,12 @@ export default {
 
 .label {
   font-size: 14px;
+  color: #414B58;
   margin-bottom: 10px;
 }
 
 input {
-  border: 1px solid #4b545abe;
+  border: 1px solid #4b545a38;
   width: 100%;
   height: 50px;
   padding: 0 15px;
@@ -263,7 +274,7 @@ input {
 .password-input {
   display: flex;
   align-items: center;
-  border: 1px solid #4b545abe;
+  border: 1px solid #4b545a38;
   border-radius: 5px;
   /* position: relative; */
   /* bottom: 10px; */
@@ -280,15 +291,25 @@ input {
   font-size: 15px;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
 .account-box button {
   color: white;
-  background-color: #0082FA;
+  background-color: #5C07A3;
   border-radius: 5px;
-  padding: 18px 50px;
+  height: 50px;
   width: 250px;
   border: none;
+  margin: auto;
   margin-top: 20px;
 }
+
+/* .btn {
+  margin: auto;
+} */
 
 @media only screen and (max-width: 900px) {
   .account-box {
@@ -297,7 +318,7 @@ input {
 }
 
 @media only screen and (max-width: 500px) {
-.tabs-container .tab{
+.inner .tab{
   font-size: 13px;
   margin-right: 0;
 }
