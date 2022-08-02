@@ -48,11 +48,11 @@
         <div class="plan">
           <div class="plan-top">
             <p class="plan-name">
-              Monthly
+              Yearly
             </p>
-            <p class="popular">
+            <!-- <p class="popular">
               Most Popular
-            </p>
+            </p> -->
           </div>
           <p class="points">
             Lorem ipsum dolor sit amet
@@ -71,7 +71,7 @@
           </p>
           <div class="price-box">
             <p class="price">
-              <span class="naira">₦ </span>4,999 <span class="month">monthly</span>
+              <span class="naira">₦ </span>19,999 <span class="month">yearly</span>
             </p>
             <div class="price-btn">
               <button>Get Started</button>
@@ -108,14 +108,18 @@ export default {
 }
 
 .plans {
+  width: 50%;
+  margin: 0 auto;
   margin-top: 5rem;
   display: flex;
+  justify-content: space-between;
 }
 
 .plan {
   border: 1px solid #5C07A3;
   width: 22rem;
   border-radius: 20px;
+  cursor: pointer;
 }
 .plan-top {
   background-color: #eaedff;

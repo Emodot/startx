@@ -32,6 +32,7 @@ textarea {
 }
 
 .grey-line {
+  border: none;
   border-top: 1px solid #77777748;
   margin-top: 20px;
   margin-bottom: 40px;
