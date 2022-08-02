@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <p class="page-title">
-      SUBSCRIPTION
+      SETTINGS
     </p>
     <hr class="grey-line">
   </div>
