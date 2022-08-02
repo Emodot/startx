@@ -6,8 +6,11 @@
     <div v-else class="table-container">
       <div class="table-top">
         <p class="table-title">
-          Latest Subscription
+          All Transactions
         </p>
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="Search Transactions...">
+        </div>
         <!-- <p class="view-all" @click="$router.push('/subscriptions')">
           View All
         </p> -->
@@ -158,6 +161,7 @@ export default {
 .table-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 30px 30px;
 }
 
@@ -165,6 +169,26 @@ export default {
   font-size: 15px;
   font-weight: 500;
   color: #000000;
+}
+
+.search-box {
+  border: 1px solid #064a7b2c;
+  height: 50px;
+  background-color: #fafafa;
+  display: flex;
+  width: 25rem;
+  padding-left: 15px;
+  border-radius: 10px;
+}
+
+::placeholder {
+  font-size: 14px;
+}
+
+.search-input {
+  border: none;
+  background-color: transparent;
+  outline: none;
 }
 
 .view-all {
