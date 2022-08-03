@@ -558,4 +558,58 @@ export default {
   line-height: 20px;
   color: #000000;
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .content-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .top-fullname {
+    font-size: 18px;
+  }
+
+  .top-email {
+    font-size: 13px;
+    margin-top: 7px;
+  }
+
+  .edit-btn {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+
+  .edit-btn svg {
+    margin-right: 6px;
+    width: 12px;
+  }
+
+  .personal {
+    margin-top: 3rem;
+  }
+
+  .content-line {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .row-ctn {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+
+  .box-text {
+    font-size: 15px;
+    word-break: break-word;
+  }
+}
 </style>
