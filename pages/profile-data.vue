@@ -612,6 +612,10 @@ export default {
     margin-bottom: 20px;
   }
 
+  .data-line  {
+    margin-top: 0;
+  }
+
   .row-ctn {
     margin-bottom: 0;
     flex-wrap: wrap;
@@ -625,6 +629,10 @@ export default {
   .box-text {
     font-size: 15px;
     word-break: break-word;
+  }
+
+  .box-ot {
+    margin-bottom: 20px;
   }
 }
 </style>
