@@ -272,6 +272,14 @@ th {
     overflow: auto;
   }
 
+  .table-top {
+    padding: 20px 15px;
+  }
+
+  .search-box {
+    width: 60%;
+  }
+
   table {
     width: 47rem;
   }

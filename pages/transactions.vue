@@ -182,7 +182,7 @@ hr {
 
 @media screen and (max-width: 600px) {
   .container {
-    padding: 30px;
+    padding: 20px;
   }
 
   .inner {
