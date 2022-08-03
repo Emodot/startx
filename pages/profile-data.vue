@@ -181,7 +181,7 @@
             Business Information - Educational Information
           </p>
           <hr class="content-line">
-          <div class="row-ctn">
+          <div class="row-ctn more-data">
             <div class="box">
               <p class="box-title">
                 Institution Name
@@ -215,7 +215,8 @@
               </p>
             </div>
           </div>
-          <div class="row-ctn">
+          <hr class="data-line">
+          <div class="row-ctn more-data">
             <div class="box">
               <p class="box-title">
                 Institution Name
@@ -256,7 +257,7 @@
             Business Information - Coporate Experience
           </p>
           <hr class="content-line">
-          <div class="row-ctn">
+          <div class="row-ctn more-data">
             <div class="box">
               <p class="box-title">
                 Comapny Name
@@ -290,7 +291,8 @@
               </p>
             </div>
           </div>
-          <div class="row-ctn">
+          <hr class="data-line">
+          <div class="row-ctn more-data">
             <div class="box">
               <p class="box-title">
                 Comapny Name
@@ -331,7 +333,7 @@
             Business Information - Licenses &amp; certifications
           </p>
           <hr class="content-line">
-          <div class="row-ctn">
+          <div class="row-ctn more-data">
             <div class="box">
               <p class="box-title">
                 Name
@@ -373,7 +375,8 @@
               https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing
             </p>
           </div>
-          <div class="row-ctn">
+          <hr class="data-line">
+          <div class="row-ctn more-data">
             <div class="box">
               <p class="box-title">
                 Name
@@ -523,9 +526,20 @@ export default {
   margin-bottom: 30px;
 }
 
+.data-line {
+  border: none;
+  border-top: 2px solid #E7E7E7;
+  width: 50%;
+  margin: 20px 0;
+}
+
 .row-ctn {
   display: flex;
   margin-bottom: 30px;
+}
+
+.more-data {
+  margin-bottom: 0;
 }
 
 .box {
@@ -544,6 +558,7 @@ export default {
 }
 
 .box-ex {
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
