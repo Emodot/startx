@@ -121,6 +121,11 @@ export default {
   border-radius: 20px;
   cursor: pointer;
 }
+
+.plan:hover {
+  border: 3px solid #5C07A3;
+}
+
 .plan-top {
   background-color: #eaedff;
   display: flex;
