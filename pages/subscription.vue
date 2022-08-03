@@ -189,4 +189,29 @@ export default {
   font-weight: 600;
   margin-bottom: 24px;
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  .head {
+    font-size: 18px;
+  }
+
+  .sub-head {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .plans {
+    margin-top: 3rem;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .plan {
+    margin-bottom: 40px;
+  }
+}
 </style>
