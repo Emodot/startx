@@ -318,15 +318,19 @@ input {
 }
 
 @media only screen and (max-width: 500px) {
-.inner .tab{
-  font-size: 13px;
-  margin-right: 0;
-}
+  .container {
+    padding: 20px;
+  }
 
-.account-box {
-  width: 100%;
-  padding: 20px;
-}
+  .inner .tab{
+    font-size: 13px;
+    margin-right: 0;
+  }
+
+  .account-box {
+    width: 100%;
+    padding: 20px;
+  }
 
 }
 </style>

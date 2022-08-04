@@ -101,6 +101,7 @@ export default {
 
 a {
   padding: 20px 20px;
+  font-size: 14px;
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.068);
 }
