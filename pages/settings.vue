@@ -322,9 +322,17 @@ input {
     padding: 20px;
   }
 
+  .inner {
+    width: 100%;
+  }
+
   .inner .tab{
     font-size: 13px;
     margin-right: 0;
+  }
+
+  .head {
+    font-size: 18px;
   }
 
   .account-box {
