@@ -1,71 +1,56 @@
 <template>
-  <div class="modal-backdrop-2">
+  <div class="modal-backdrop-2 reveal">
     <div class="modal-2">
-      <!-- <div class="modal-icon">
-        <img src="~assets/icons/settings.svg" alt="">
-      </div> -->
-      <h1 class="title">
-        Reset Password
+      <div class="modal-icon">
+        <svg width="84" height="84" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 42C3.5 20.737 20.737 3.5 42 3.5C63.263 3.5 80.5 20.737 80.5 42C80.5 63.263 63.263 80.5 42 80.5C20.737 80.5 3.5 63.263 3.5 42Z" fill="#5C07A3" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M60.5873 28.1503C61.9542 29.5171 61.9542 31.7332 60.5873 33.1L38.8624 55.85C37.4956 57.2168 35.2795 57.2168 33.9127 55.85L23.4127 45.35C22.0459 43.9832 22.0459 41.7671 23.4127 40.4003C24.7795 39.0334 26.9956 39.0334 28.3624 40.4003L36.3876 48.4254L55.6376 28.1503C57.0044 26.7834 59.2205 26.7834 60.5873 28.1503Z" fill="white" />
+        </svg>
+      </div>
+      <h1 v-if="page === 'account'" class="title">
+        Email Verified!
       </h1>
-      <p class="sub-title">
-        Enter the email associated with your account to reset your password
+      <h1 v-else class="title">
+        Account Created!
+      </h1>
+      <p v-if="page === 'account'" class="sub-title">
+        Your Email Address has been successfully Verified. Your can start taking Challenges
+      </p>
+      <p v-else class="sub-title">
+        Please navigate to the Account page to complete your profile
       </p>
       <div class="form">
-        <div class="input-container">
-          <p class="label">
-            Email Address
-          </p>
-          <input v-model="email" type="email" name="email" placeholder="Enter Email Address">
-        </div>
         <div class="btn">
-          <button v-if="loading">
-            <Loader />
+          <button v-if="page === 'account'" @click="$router.push('/challenges/challenge-system')">
+            Challenge System
           </button>
-          <button @click="forgotPassword()">
-            Send Instructions
+          <button v-else @click="$router.push('/account')">
+            Account Page
           </button>
         </div>
-        <p class="text" @click="$emit('close-modal')">
-          Cancel
-        </p>
+        <!-- <p class="text" @click="$router.push('/')">
+          Go Home
+        </p> -->
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Cookies from 'js-cookie'
 export default {
   props: {
     actionData: {
+      type: String,
+      default: ''
+    },
+    page: {
       type: String,
       default: ''
     }
   },
   data () {
     return {
-      email: '',
-      loading: false
-    }
-  },
-  methods: {
-    forgotPassword () {
-      this.loading = true
-      this.$axios.$post('/forgot_password', {
-        email: this.email
-      }, {
-        headers: {
-          Authorization: `Bearer ${Cookies.get('token')}`
-        }
-      }).then((response) => {
-        // console.log(response)
-        if (!response.error) {
-          this.$toast.success(response.statusText)
-          this.$emit('sentInst', this.email)
-        } else {
-          this.$toast.error(response.errorMsg)
-        }
-      })
+      userEmail: 'acumen@mail.com'
     }
   }
 }
@@ -109,7 +94,7 @@ export default {
 }
 
 .modal-icon img {
-  width: 60px;
+  width: 80px;
 }
 
 ::placeholder {
@@ -120,6 +105,7 @@ export default {
   font-size: 24px;
   font-weight: 600;
   text-align: center;
+  margin-top: 30px;
 }
 
 .sub-title {
@@ -127,7 +113,17 @@ export default {
   text-align: center;
   width: 60%;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.span-account {
+  font-size: 14px;
+  color: #5C07A3;
+  cursor: pointer;
+  /* text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 10px; */
 }
 
 .form {
@@ -155,12 +151,17 @@ input {
   outline: none;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
 .btn button {
-  width: 100%;
+  width: 70%;
   height: 50px;
-  background-color: #5C07A3;
-  color: #fff;
-  border: none;
+  background-color: #1da0f239;
+  border: 2px solid #5C07A3;
+  color: #5C07A3;
   outline: none;
   cursor: pointer;
   border-radius: 5px;
