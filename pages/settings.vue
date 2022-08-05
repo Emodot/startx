@@ -4,7 +4,7 @@
       <p class="page-title">
         SETTINGS
       </p>
-      <p class="log-out">
+      <p class="log-out" @click="logOut()">
         LOG OUT
       </p>
     </div>
@@ -124,6 +124,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie'
 export default {
   layout: 'MainLayout',
   data () {
@@ -147,6 +148,17 @@ export default {
     }
   },
   methods: {
+    logOut () {
+      Cookies.remove('token')
+      Cookies.remove('first_name')
+      Cookies.remove('last_name')
+      Cookies.remove('email')
+      Cookies.remove('id')
+      // Cookies.remove('emailVerified')
+      this.$router.push('/login')
+      this.$toast.show('Logged Out')
+      // this.$router.push('/login')
+    },
     showHide () {
       if (this.type === 'password') {
         this.type = 'text'
