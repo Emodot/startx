@@ -37,6 +37,9 @@
       <div v-if="activeTab == 'personal'" class="tab-1">
         <FormsPersonalInfo />
       </div>
+      <div v-if="activeTab == 'other'" class="tab-1">
+        <FormsOtherInfo />
+      </div>
     </div>
   </div>
 </template>
