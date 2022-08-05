@@ -1,9 +1,9 @@
 <template>
   <div class="modal-backdrop-2">
     <div class="modal-2">
-      <!-- <div class="modal-icon">
-        <img src="~assets/icons/settings.svg" alt="">
-      </div> -->
+      <div class="modal-icon">
+        <!-- <img src="~assets/icons/settings.svg" alt=""> -->
+      </div>
       <h1 class="title">
         Reset Password
       </h1>
@@ -21,7 +21,7 @@
           <button v-if="loading">
             <Loader />
           </button>
-          <button @click="forgotPassword()">
+          <button v-else @click="forgotPassword()">
             Send Instructions
           </button>
         </div>
@@ -50,6 +50,7 @@ export default {
   },
   methods: {
     forgotPassword () {
+      this.$emit('sentInst', this.email)
       this.loading = true
       this.$axios.$post('/forgot_password', {
         email: this.email

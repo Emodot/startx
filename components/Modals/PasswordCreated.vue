@@ -7,27 +7,21 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M60.5873 28.1503C61.9542 29.5171 61.9542 31.7332 60.5873 33.1L38.8624 55.85C37.4956 57.2168 35.2795 57.2168 33.9127 55.85L23.4127 45.35C22.0459 43.9832 22.0459 41.7671 23.4127 40.4003C24.7795 39.0334 26.9956 39.0334 28.3624 40.4003L36.3876 48.4254L55.6376 28.1503C57.0044 26.7834 59.2205 26.7834 60.5873 28.1503Z" fill="white" />
         </svg>
       </div>
-      <h1 v-if="page === 'account'" class="title">
-        Email Verified!
+      <h1 class="title">
+        Password Changed!
       </h1>
-      <h1 v-else class="title">
-        Account Created!
-      </h1>
-      <p v-if="page === 'account'" class="sub-title">
-        Your Email Address has been successfully Verified. Your can start taking Challenges
-      </p>
-      <p v-else class="sub-title">
-        Please navigate to the Account page to complete your profile
+      <p class="sub-title">
+        You have successfully created a new Password
       </p>
       <div class="form">
         <div class="btn">
-          <button @click="$router.push('/profile-data')">
-            Fill Your Profile Data
+          <button @click="$router.push('/')">
+            Dashboard
           </button>
         </div>
-        <p class="text" @click="$router.push('/')">
-          Go to Dashboard
-        </p>
+        <!-- <p class="text" @click="$router.push('/')">
+          Go Home
+        </p> -->
       </div>
     </div>
   </div>
@@ -81,7 +75,7 @@ export default {
   align-items: center;
   border-radius: 20px;
   overflow-y: auto;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
 }
 
 .modal-icon {
@@ -154,7 +148,7 @@ input {
 }
 
 .btn button {
-  width: 80%;
+  width: 70%;
   height: 50px;
   background-color: #5d07a337;
   border: 2px solid #5C07A3;
@@ -166,11 +160,9 @@ input {
 }
 
 .text {
-  color: #5C07A3;
-  margin-top: 30px;
+  margin-top: 20px;
   text-align: center;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
   cursor: pointer;
 }
 

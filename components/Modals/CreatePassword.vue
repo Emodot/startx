@@ -15,17 +15,6 @@
       <div class="form">
         <div class="input-container">
           <p class="label">
-            Enter OTP
-          </p>
-          <div class="password-input">
-            <input v-model="code" class="pass-input" type="number" placeholder="Enter OTP">
-            <!-- <p class="show-hide" @click="showHide()">
-              {{ show_hide }}
-            </p> -->
-          </div>
-        </div>
-        <div class="input-container">
-          <p class="label">
             Password
           </p>
           <div class="password-input">
@@ -216,9 +205,13 @@ input {
   cursor: pointer;
   font-size: 14px;
 }
+.btn {
+  display: flex;
+  justify-content: center;
+}
 
 .btn button {
-  width: 100%;
+  width: 70%;
   height: 50px;
   background-color: #5C07A3;
   color: #fff;

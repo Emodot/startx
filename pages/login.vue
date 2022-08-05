@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="rhs">
-        <div v-if="(resetPass === false && linkSent === false)" class="modal">
+        <div v-if="(resetPass === false && linkSent === false && createPassword === false && passwordCreated === false)" class="modal">
           <h1 class="title">
             Welcome Back!
           </h1>
@@ -61,6 +61,7 @@
     <ResetPassword v-if="resetPass" @close-modal="resetPass = false" @sentInst="sentInst" />
     <LinkSent v-if="linkSent" :user-email="userEmail" @set-password="setPassword" />
     <CreatePassword v-if="createPassword" />
+    <PasswordCreated v-if="passwordCreated" />
   </div>
 </template>
 
@@ -69,11 +70,13 @@ import Cookies from 'js-cookie'
 import LinkSent from '~/components/Modals/LinkSent.vue'
 import ResetPassword from '~/components/Modals/ResetPassword.vue'
 import CreatePassword from '~/components/Modals/CreatePassword.vue'
+import PasswordCreated from '~/components/Modals/PasswordCreated.vue'
 export default {
   components: {
     ResetPassword,
     LinkSent,
-    CreatePassword
+    CreatePassword,
+    PasswordCreated
   },
   data () {
     return {
@@ -82,6 +85,7 @@ export default {
       password: '',
       resetPass: false,
       linkSent: false,
+      passwordCreated: false,
       createPassword: false,
       type: 'password',
       show_hide: 'show',
