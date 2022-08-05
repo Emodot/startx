@@ -176,7 +176,7 @@ export default {
   border: 1px solid #B4B4B4;
   outline: none;
   border-radius: 3px;
-  padding-left: 15px;
+  padding: 0 15px;
 }
 
 ::placeholder {
