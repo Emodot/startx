@@ -168,6 +168,7 @@ export default {
       }
     },
     register () {
+      this.accountCreated = true
       this.loading = true
       this.$axios.$post('/register', {
         firstname: this.first_name,

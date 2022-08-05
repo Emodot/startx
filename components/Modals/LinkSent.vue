@@ -1,9 +1,9 @@
 <template>
   <div class="modal-backdrop-2">
     <div class="modal-2">
-      <!-- <div class="modal-icon">
-        <img src="~assets/icons/plane.svg" alt="">
-      </div> -->
+      <div class="modal-icon">
+        <!-- <img src="~assets/icons/plane.svg" alt=""> -->
+      </div>
       <h1 class="title">
         Link Sent
       </h1>
@@ -13,12 +13,13 @@
       <div class="form">
         <div class="btn">
           <button @click="$emit('set-password')">
-            Set New Password
+            Create New Password
           </button>
         </div>
-        <!-- <p class="text">
-          Cancel
-        </p> -->
+        <p class="text">
+          Did not receive the email ? Check your spam folder
+          or  <span class="ano-email">try another email address</span>
+        </p>
       </div>
     </div>
   </div>
@@ -29,7 +30,7 @@ export default {
   props: {
     userEmail: {
       type: String,
-      default: ''
+      default: 'emodot991@gmail.com'
     }
   },
   data () {
@@ -73,7 +74,7 @@ export default {
 
 .modal-icon {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px;
   margin-bottom: 20px;
 }
 
@@ -128,8 +129,13 @@ input {
   outline: none;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
 .btn button {
-  width: 100%;
+  width: 70%;
   height: 50px;
   background-color: #5C07A3;
   color: #fff;
@@ -141,10 +147,16 @@ input {
 }
 
 .text {
-  margin-top: 20px;
+  margin-top: 50px;
   text-align: center;
   font-size: 14px;
+  line-height: 24px;
   cursor: pointer;
+}
+
+.ano-email {
+  color: #5C07A3;
+  font-weight: 600;
 }
 
 @media only screen and (max-width: 900px) {
