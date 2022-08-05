@@ -226,5 +226,6 @@ export default {
   color: #fff;
   outline: none;
   border-radius: 20px;
+  cursor: pointer;
 }
 </style>
