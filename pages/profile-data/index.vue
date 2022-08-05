@@ -16,7 +16,7 @@
             </p>
           </div>
           <div class="con-rhs">
-            <button class="edit-btn">
+            <button class="edit-btn" @click="$router.push('/profile-data/edit')">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4005 0C11.2061 0 11.0039 0.077767 10.8562 0.225524L9.43304 1.64866L12.3493 4.56492L13.7724 3.14179C14.0757 2.83849 14.0757 2.34856 13.7724 2.04527L11.9527 0.225524C11.7972 0.0699903 11.6027 0 11.4005 0ZM8.60103 4.68159L9.31648 5.39704L2.2708 12.4427H1.55534V11.7273L8.60103 4.68159ZM0 11.0817L8.60103 2.48072L11.5173 5.39698L2.91626 13.998H0V11.0817Z" fill="white" />
               </svg>
