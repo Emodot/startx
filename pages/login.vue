@@ -1,59 +1,63 @@
 <template>
   <div class="modal-backdrop">
     <div class="top-side">
-      <div class="logo">
-        <img src="~assets/img/StartX-logo.png" alt="">
+      <div class="lhs">
+        <div class="logo">
+          <img src="~assets/img/StartX-logo-white.png" alt="">
+        </div>
       </div>
-      <div v-if="(resetPass === false && linkSent === false)" class="modal">
-        <h1 class="title">
-          Welcome Back!
-        </h1>
-        <p class="sub-title">
-          Login with your account details to continue.
-        </p>
-        <div class="form">
-          <div class="input-container">
-            <p class="label">
-              Email Address
-            </p>
-            <input v-model="email" type="email" name="" placeholder="Enter Email Address">
-          </div>
-          <div class="input-container">
-            <p class="label">
-              Password
-            </p>
-            <div class="password-input">
-              <input v-model="password" class="pass-input" :type="type" placeholder="Enter Password">
-              <p class="show-hide" @click="showHide()">
-                {{ show_hide }}
+      <div class="rhs">
+        <div v-if="(resetPass === false && linkSent === false)" class="modal">
+          <h1 class="title">
+            Welcome Back!
+          </h1>
+          <p class="sub-title">
+            Login with your account details to continue.
+          </p>
+          <div class="form">
+            <div class="input-container">
+              <p class="label">
+                Email Address
+              </p>
+              <input v-model="email" type="email" name="" placeholder="Enter Email Address">
+            </div>
+            <div class="input-container">
+              <p class="label">
+                Password
+              </p>
+              <div class="password-input">
+                <input v-model="password" class="pass-input" :type="type" placeholder="Enter Password">
+                <p class="show-hide" @click="showHide()">
+                  {{ show_hide }}
+                </p>
+              </div>
+              <p class="forgot-pass" @click="resetPass = true">
+                Forgot Password?
               </p>
             </div>
-            <p class="forgot-pass" @click="resetPass = true">
-              Forgot Password?
+            <div class="btn">
+              <button v-if="loading">
+                <Loader />
+              </button>
+              <button v-else @click="login()">
+                Login
+              </button>
+            </div>
+            <p class="text">
+              Not yet a register user?
             </p>
+            <NuxtLink to="/register">
+              <p class="create-acct">
+                Create An Account
+              </p>
+            </NuxtLink>
           </div>
-          <div class="btn">
-            <button v-if="loading">
-              <Loader />
-            </button>
-            <button v-else @click="login()">
-              Login
-            </button>
-          </div>
-          <p class="text">
-            Not yet a register user?
-          </p>
-          <NuxtLink to="/register">
-            <p class="create-acct">
-              Create An Account
-            </p>
-          </NuxtLink>
         </div>
       </div>
     </div>
-    <p class="link">
-      www.challengeme.ng
-    </p>
+    <!-- <p class="link">
+      www.startx.com
+    </p> -->
     <ResetPassword v-if="resetPass" @close-modal="resetPass = false" @sentInst="sentInst" />
     <LinkSent v-if="linkSent" :user-email="userEmail" @set-password="setPassword" />
     <CreatePassword v-if="createPassword" />
@@ -152,10 +156,10 @@ export default {
   position: fixed;
   overflow: auto;
   height: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   top: 0;
   bottom: 0;
   left: 0;
@@ -165,19 +169,32 @@ export default {
 
 .top-side {
   display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  padding: 5rem;
+  width: 100%;
+  /* flex-direction: column; */
+}
+
+.lhs {
+  flex-basis: 50%;
+}
+
+.rhs {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width: 37%;
-  flex-direction: column;
 }
 
 .modal {
   padding: 50px;
   padding-top: 70px;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   background-color: white;
   height: fit-content;
   align-items: center;
-  width: 100%;
+  width: 80%;
   border-radius: 20px;
   overflow-y: auto;
   padding-bottom: 50px;
@@ -185,7 +202,7 @@ export default {
 
 .logo {
   width: 17%;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 }
 
 .logo img {
@@ -201,7 +218,7 @@ export default {
 .sub-title {
   font-size: 14px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .form {
@@ -264,7 +281,7 @@ input {
 }
 
 .forgot-pass {
-  color: #1DA1F2;
+  color: #5C07A3;
   margin-top: 10px;
   font-size: 14px;
   text-align: right;
@@ -275,7 +292,7 @@ input {
 .btn button {
   width: 100%;
   height: 50px;
-  background-color: #1DA1F2;
+  background-color: #5C07A3;
   color: #fff;
   border: none;
   outline: none;
@@ -293,7 +310,7 @@ input {
 .create-acct {
   text-align: center;
   font-size: 14px;
-  color: #1DA1F2;
+  color: #5C07A3;
   margin-top: 6px;
   font-weight: 500;
 }

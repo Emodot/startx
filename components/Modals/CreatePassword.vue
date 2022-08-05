@@ -220,7 +220,7 @@ input {
 .btn button {
   width: 100%;
   height: 50px;
-  background-color: #1DA1F2;
+  background-color: #5C07A3;
   color: #fff;
   border: none;
   outline: none;
