@@ -7,19 +7,39 @@
         </div>
       </div>
       <div class="rhs">
-        <div v-if="(resetPass === false && linkSent === false)" class="modal">
+        <div v-if="accountCreated === false" class="modal">
           <h1 class="title">
-            Welcome Back!
+            Create An Account!
           </h1>
           <p class="sub-title">
-            Login with your account details to continue.
+            Register with your account details to begin.
           </p>
           <div class="form">
+            <div class="input-div">
+              <div class="input-box">
+                <p class="label">
+                  First Name
+                </p>
+                <input v-model="first_name" type="text" name="" placeholder="Enter First Name">
+              </div>
+              <div class="input-box">
+                <p class="label">
+                  Last Name
+                </p>
+                <input v-model="last_name" type="text" name="" placeholder="Enter Last Name">
+              </div>
+            </div>
             <div class="input-container">
               <p class="label">
                 Email Address
               </p>
               <input v-model="email" type="email" name="" placeholder="Enter Email Address">
+            </div>
+            <div class="input-container">
+              <p class="label">
+                Mobile Number
+              </p>
+              <input v-model="phone_number" type="number" name="" placeholder="Enter Mobile Number">
             </div>
             <div class="input-container">
               <p class="label">
@@ -31,24 +51,21 @@
                   {{ show_hide }}
                 </p>
               </div>
-              <p class="forgot-pass" @click="resetPass = true">
-                Forgot Password?
-              </p>
             </div>
             <div class="btn">
               <button v-if="loading">
                 <Loader />
               </button>
-              <button v-else @click="login()">
-                Login
+              <button v-else @click="register()">
+                Register
               </button>
             </div>
             <p class="text">
-              Not yet a register user?
+              Already have an account?
             </p>
-            <NuxtLink to="/register">
+            <NuxtLink to="/login">
               <p class="create-acct">
-                Create An Account
+                Login
               </p>
             </NuxtLink>
           </div>
@@ -56,37 +73,67 @@
       </div>
     </div>
     <!-- <p class="link">
-      www.startx.com
+      www.startx.ng
     </p> -->
-    <ResetPassword v-if="resetPass" @close-modal="resetPass = false" @sentInst="sentInst" />
-    <LinkSent v-if="linkSent" :user-email="userEmail" @set-password="setPassword" />
-    <CreatePassword v-if="createPassword" />
+    <AccountCreated v-if="accountCreated" />
   </div>
 </template>
 
 <script>
 import Cookies from 'js-cookie'
-import LinkSent from '~/components/Modals/LinkSent.vue'
-import ResetPassword from '~/components/Modals/ResetPassword.vue'
-import CreatePassword from '~/components/Modals/CreatePassword.vue'
+import Loader from '~/components/Loader.vue'
+import AccountCreated from '~/components/Modals/AccountCreated.vue'
 export default {
   components: {
-    ResetPassword,
-    LinkSent,
-    CreatePassword
+    AccountCreated,
+    Loader
   },
   data () {
     return {
+      accountCreated: false,
       loading: false,
+      first_name: '',
+      last_name: '',
       email: '',
+      phone_number: '',
       password: '',
-      resetPass: false,
-      linkSent: false,
-      createPassword: false,
+      pin: '',
+      comfirm_password: '',
       type: 'password',
       show_hide: 'show',
-      publicToken: '',
-      userEmail: ''
+      C_type: 'password',
+      pin_type: 'password',
+      C_show_hide: 'show',
+      pin_show_hide: 'show',
+      publicToken: ''
+    }
+  },
+  computed: {
+    validEmail () {
+      // eslint-disable-next-line no-useless-escape
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(this.email)
+    },
+    allFieldsValid () {
+      return this.firstname && this.lastname &&
+      this.phoneNumber && this.phoneNumberValid && this.validEmail && this.passwordEligible && !this.error
+    }
+  },
+  watch: {
+    allFieldsValid (val) {
+      if (val === true) {
+        this.generalError = false
+      } else {
+        this.generalError = true
+      }
+    },
+    email () {
+      this.error = ''
+    },
+    phoneNumber (val) {
+      if (val?.length >= 11) {
+        this.phoneNumber = val.substring(0, val.length - 1)
+      }
     }
   },
   created () {
@@ -102,32 +149,50 @@ export default {
         this.show_hide = 'show'
       }
     },
-    sentInst (email) {
-      this.userEmail = email
-      this.resetPass = false
-      this.linkSent = true
+    C_showHide () {
+      if (this.C_type === 'password') {
+        this.C_type = 'text'
+        this.C_show_hide = 'hide'
+      } else if (this.C_type === 'text') {
+        this.C_type = 'password'
+        this.C_show_hide = 'show'
+      }
     },
-    setPassword () {
-      this.linkSent = false
-      this.createPassword = true
+    pin_showHide () {
+      if (this.pin_type === 'password') {
+        this.pin_type = 'text'
+        this.pin_show_hide = 'hide'
+      } else if (this.pin_type === 'text') {
+        this.pin_type = 'password'
+        this.pin_show_hide = 'show'
+      }
     },
-    login () {
+    register () {
       this.loading = true
-      this.$axios.$post('/login', {
+      this.$axios.$post('/register', {
+        firstname: this.first_name,
+        lastname: this.last_name,
         email: this.email,
-        password: this.password
+        password: this.password,
+        pin: this.pin,
+        number: this.phone_number
       }, {
         headers: {
-          Authorization: `Bearer ${Cookies.get('token')}`
+          Authorization: `Bearer ${this.publicToken}`
         }
       }).then((response) => {
-        this.loading = false
         // console.log(response)
+        this.loading = false
         if (!response.error) {
+          // console.log(response)
           this.$toast.success(response.statusText)
-          Cookies.set('token', response.token)
-          Cookies.set('id', response.id)
-          this.$router.push('/')
+          Cookies.set('token', response.data.token)
+          Cookies.set('id', response.data.id)
+          Cookies.set('first_name', this.first_name)
+          Cookies.set('last_name', this.last_name)
+          Cookies.set('email', this.email)
+          this.accountCreated = true
+          // this.$router.push('/')
         } else {
           this.$toast.error(response.errorMsg)
         }
@@ -135,9 +200,11 @@ export default {
         // console.log(onrejected)
         this.loading = false
         if (onrejected.error) {
+          // this.error = onrejected.statusText
           this.$toast.error(onrejected.errorMsg)
         }
       })
+      // this.accountCreated = true
     }
   }
 }
@@ -190,11 +257,11 @@ export default {
 .modal {
   padding: 50px;
   padding-top: 70px;
-  /* margin-top: 3rem; */
+  /* margin-top: 1rem; */
   background-color: white;
   height: fit-content;
   align-items: center;
-  width: 80%;
+  width: 85%;
   border-radius: 20px;
   overflow-y: auto;
   padding-bottom: 50px;
@@ -202,7 +269,7 @@ export default {
 
 .logo {
   width: 17%;
-  /* margin-top: 3rem; */
+  /* margin-top: 1.5rem; */
 }
 
 .logo img {
@@ -218,7 +285,7 @@ export default {
 .sub-title {
   font-size: 14px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .form {
@@ -229,6 +296,16 @@ export default {
 
 .input-container {
   margin-bottom: 20px;
+}
+
+.input-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  width: 48%;
 }
 
 ::placeholder {
@@ -328,7 +405,7 @@ input {
 
 @media only screen and (max-width: 900px) {
   .top-side {
-    width: 70%;
+    width: 80%;
   }
 
   .form {
@@ -340,7 +417,7 @@ input {
 @media only screen and (max-width: 500px) {
   .logo {
     width: 25%;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .top-side {
@@ -351,7 +428,7 @@ input {
   .modal {
     padding: 30px;
     padding-top: 50px;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 
   .title {
@@ -364,10 +441,6 @@ input {
 
   .form {
     width: 100%;
-  }
-
-  .forgot-pass {
-    font-size: 12px;
   }
 
   .label {
