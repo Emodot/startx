@@ -1,132 +1,72 @@
 <template>
   <div class="ctn">
+    <p class="content-title">
+      Social Media Information
+    </p>
+    <hr class="content-line">
     <div class="row">
       <div class="input-ctn">
         <p class="label">
-          First Name
+          Instagram
         </p>
-        <input v-model="first_name" type="text" class="input" placeholder="First Name">
+        <input v-model="instagram" type="text" class="input" placeholder="@Instagram">
       </div>
       <div class="input-ctn">
         <p class="label">
-          Middle Name
+          Twitter
         </p>
-        <input v-model="middle_name" type="text" class="input" placeholder="Middle Name">
+        <input v-model="twitter" type="text" class="input" placeholder="@Twitter">
       </div>
       <div class="input-ctn">
         <p class="label">
-          Last Name
+          LinkedIn
         </p>
-        <input v-model="last_name" type="text" class="input" placeholder="Last Name">
+        <input v-model="linkedIn" type="text" class="input" placeholder="LinkedIn">
       </div>
     </div>
     <div class="row">
       <div class="input-ctn">
         <p class="label">
-          Email Address
+          FaceBook
         </p>
-        <input v-model="email" type="text" class="input" placeholder="Email Address">
-      </div>
-      <div class="input-ctn">
-        <p class="label">
-          Phone Number
-        </p>
-        <input v-model="phone" type="text" class="input" placeholder="Phone Number">
-      </div>
-      <div class="input-ctn">
-        <p class="label">
-          Date of Birth
-        </p>
-        <input v-model="dob" type="date" class="input" placeholder="Date of Birth">
+        <input v-model="faceBook" type="text" class="input" placeholder="FaceBook">
       </div>
     </div>
+    <p class="content-title">
+      Other Information
+    </p>
+    <hr class="content-line">
     <div class="row">
       <div class="input-ctn">
         <p class="label">
-          Age
+          Skills
         </p>
-        <input v-model="age" type="text" class="input" placeholder="Age">
+        <input v-model="skills" type="text" class="input" placeholder="Skills">
       </div>
       <div class="input-ctn">
         <p class="label">
-          Languages
+          Hobbies
         </p>
-        <input v-model="languages" type="text" class="input" placeholder="Languages">
+        <input v-model="hobbies" type="text" class="input" placeholder="Hobbies">
       </div>
-      <div class="input-ctn">
-        <p class="label">
-          Nationality
-        </p>
-        <div class="form-select">
-          <select v-model="nationality" required>
-            <option value="">
-              Please Select
-            </option>
-            <option value="nigerian">
-              Nigerian
-            </option>
-            <option value="abuja">
-              Abuja
-            </option>
-          </select>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="#818181" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
+      <div class="input-ctn" />
     </div>
     <div class="row">
-      <div class="input-ctn">
+      <div class="text-area-ctn">
         <p class="label">
-          State of Origin
+          Summary About You
         </p>
-        <div class="form-select">
-          <select v-model="state_origin" required>
-            <option value="">
-              Please Select
-            </option>
-            <option value="lagos">
-              Lagos
-            </option>
-            <option value="abuja">
-              Abuja
-            </option>
-          </select>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="#818181" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-      <div class="input-ctn">
-        <p class="label">
-          State of Residence
-        </p>
-        <div class="form-select">
-          <select v-model="state_residence" required>
-            <option value="">
-              Please Select
-            </option>
-            <option value="lagos">
-              Lagos
-            </option>
-            <option value="abuja">
-              Abuja
-            </option>
-          </select>
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.625 6.75L9 12.375L3.375 6.75" stroke="#818181" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </div>
-      </div>
-      <div class="input-ctn">
-        <p class="label">
-          Residential Address
-        </p>
-        <input v-model="residential_address" type="text" class="input" placeholder="Residential Address">
+        <textarea
+          id=""
+          v-model="summary"
+          name=""
+          rows="10"
+          placeholder="Summary About You..."
+        />
       </div>
     </div>
     <div class="bottom-btn">
-      <button>Save &amp; Continue</button>
+      <button>Save</button>
     </div>
   </div>
 </template>
@@ -135,24 +75,31 @@
 export default {
   data () {
     return {
-      first_name: '',
-      last_name: '',
-      middle_name: '',
-      email: '',
-      phone: '',
-      dob: '',
-      languages: '',
-      nationality: '',
-      state_residence: '',
-      state_origin: '',
-      residence_address: '',
-      age: ''
+      instagram: '',
+      twitter: '',
+      linkedIn: '',
+      faceBook: '',
+      summary: '',
+      hobbies: '',
+      skills: ''
     }
   }
 }
 </script>
 
 <style scoped>
+.content-title {
+  color: #060D49;
+  font-size: 15px;
+}
+
+.content-line {
+  border: none;
+  border-top: 1px solid #E7E7E7;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
@@ -226,5 +173,15 @@ export default {
   color: #fff;
   outline: none;
   border-radius: 20px;
+}
+
+.text-area-ctn {
+  width: 100%;
+}
+
+textarea {
+  outline: none;
+  width: 100%;
+  padding: 20px;
 }
 </style>
