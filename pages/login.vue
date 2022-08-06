@@ -116,6 +116,7 @@ export default {
       this.createPassword = true
     },
     login () {
+      this.$router.push('/')
       this.loading = true
       this.$axios.$post('/login', {
         email: this.email,
