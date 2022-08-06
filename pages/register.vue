@@ -417,16 +417,32 @@ input {
 
 @media only screen and (max-width: 500px) {
   .logo {
-    width: 25%;
-    margin-top: 1rem;
+    width: 40%;
+    margin-top: 3rem;
   }
 
   .top-side {
-    width: 90%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .lhs {
+    flex-basis: 10%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rhs {
+    flex-basis: 100%;
+    width: 90%;
   }
 
   .modal {
+    width: 100%;
     padding: 30px;
     padding-top: 50px;
     margin-top: 1rem;
