@@ -52,12 +52,10 @@ export default {
     $route () {
       this.showMobileMenu = false
       // this.checkLoggedIn()
-      // this.checkInternet()
     }
   },
   created () {
     // this.checkLoggedIn()
-    // this.checkInternet()
   },
   methods: {
     // checkLoggedIn () {
