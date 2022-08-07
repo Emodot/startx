@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 export default {
   props: {
     actionData: {
@@ -52,21 +52,21 @@ export default {
     forgotPassword () {
       this.$emit('sentInst', this.email)
       this.loading = true
-      this.$axios.$post('/forgot_password', {
-        email: this.email
-      }, {
-        headers: {
-          Authorization: `Bearer ${Cookies.get('token')}`
-        }
-      }).then((response) => {
-        // console.log(response)
-        if (!response.error) {
-          this.$toast.success(response.statusText)
-          this.$emit('sentInst', this.email)
-        } else {
-          this.$toast.error(response.errorMsg)
-        }
-      })
+      // this.$axios.$post('/forgot_password', {
+      //   email: this.email
+      // }, {
+      //   headers: {
+      //     Authorization: `Bearer ${Cookies.get('token')}`
+      //   }
+      // }).then((response) => {
+      //   // console.log(response)
+      //   if (!response.error) {
+      //     this.$toast.success(response.statusText)
+      //     this.$emit('sentInst', this.email)
+      //   } else {
+      //     this.$toast.error(response.errorMsg)
+      //   }
+      // })
     }
   }
 }
