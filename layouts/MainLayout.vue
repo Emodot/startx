@@ -45,9 +45,7 @@ export default {
       showMobileMenu: false,
       addNewContact: false,
       openNotification: false,
-      openLogout: false,
-      trigger: false,
-      onLine: null
+      openLogout: false
     }
   },
   watch: {
