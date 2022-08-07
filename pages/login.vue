@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 import LinkSent from '~/components/Modals/LinkSent.vue'
 import ResetPassword from '~/components/Modals/ResetPassword.vue'
 import CreatePassword from '~/components/Modals/CreatePassword.vue'
@@ -118,31 +118,31 @@ export default {
     login () {
       this.$router.push('/')
       this.loading = true
-      this.$axios.$post('/login', {
-        email: this.email,
-        password: this.password
-      }, {
-        headers: {
-          Authorization: `Bearer ${Cookies.get('token')}`
-        }
-      }).then((response) => {
-        this.loading = false
-        // console.log(response)
-        if (!response.error) {
-          this.$toast.success(response.statusText)
-          Cookies.set('token', response.token)
-          Cookies.set('id', response.id)
-          this.$router.push('/')
-        } else {
-          this.$toast.error(response.errorMsg)
-        }
-      }).catch((onrejected) => {
-        // console.log(onrejected)
-        this.loading = false
-        if (onrejected.error) {
-          this.$toast.error(onrejected.errorMsg)
-        }
-      })
+      // this.$axios.$post('/login', {
+      //   email: this.email,
+      //   password: this.password
+      // }, {
+      //   headers: {
+      //     Authorization: `Bearer ${Cookies.get('token')}`
+      //   }
+      // }).then((response) => {
+      //   this.loading = false
+      //   // console.log(response)
+      //   if (!response.error) {
+      //     this.$toast.success(response.statusText)
+      //     Cookies.set('token', response.token)
+      //     Cookies.set('id', response.id)
+      //     this.$router.push('/')
+      //   } else {
+      //     this.$toast.error(response.errorMsg)
+      //   }
+      // }).catch((onrejected) => {
+      //   // console.log(onrejected)
+      //   this.loading = false
+      //   if (onrejected.error) {
+      //     this.$toast.error(onrejected.errorMsg)
+      //   }
+      // })
     }
   }
 }
