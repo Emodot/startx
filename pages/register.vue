@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 import Loader from '~/components/Loader.vue'
 import AccountCreated from '~/components/Modals/AccountCreated.vue'
 export default {
@@ -170,42 +170,42 @@ export default {
     register () {
       this.accountCreated = true
       this.loading = true
-      this.$axios.$post('/register', {
-        firstname: this.first_name,
-        lastname: this.last_name,
-        email: this.email,
-        password: this.password,
-        pin: this.pin,
-        number: this.phone_number
-      }, {
-        headers: {
-          Authorization: `Bearer ${this.publicToken}`
-        }
-      }).then((response) => {
-        // console.log(response)
-        this.loading = false
-        if (!response.error) {
-          // console.log(response)
-          this.$toast.success(response.statusText)
-          Cookies.set('token', response.data.token)
-          Cookies.set('id', response.data.id)
-          Cookies.set('first_name', this.first_name)
-          Cookies.set('last_name', this.last_name)
-          Cookies.set('email', this.email)
-          this.accountCreated = true
-          // this.$router.push('/')
-        } else {
-          this.$toast.error(response.errorMsg)
-        }
-      }).catch((onrejected) => {
-        // console.log(onrejected)
-        this.loading = false
-        if (onrejected.error) {
-          // this.error = onrejected.statusText
-          this.$toast.error(onrejected.errorMsg)
-        }
-      })
-      // this.accountCreated = true
+      // this.$axios.$post('/register', {
+      //   firstname: this.first_name,
+      //   lastname: this.last_name,
+      //   email: this.email,
+      //   password: this.password,
+      //   pin: this.pin,
+      //   number: this.phone_number
+      // }, {
+      //   headers: {
+      //     Authorization: `Bearer ${this.publicToken}`
+      //   }
+      // }).then((response) => {
+      //   // console.log(response)
+      //   this.loading = false
+      //   if (!response.error) {
+      //     // console.log(response)
+      //     this.$toast.success(response.statusText)
+      //     Cookies.set('token', response.data.token)
+      //     Cookies.set('id', response.data.id)
+      //     Cookies.set('first_name', this.first_name)
+      //     Cookies.set('last_name', this.last_name)
+      //     Cookies.set('email', this.email)
+      //     this.accountCreated = true
+      //     // this.$router.push('/')
+      //   } else {
+      //     this.$toast.error(response.errorMsg)
+      //   }
+      // }).catch((onrejected) => {
+      //   // console.log(onrejected)
+      //   this.loading = false
+      //   if (onrejected.error) {
+      //     // this.error = onrejected.statusText
+      //     this.$toast.error(onrejected.errorMsg)
+      //   }
+      // })
+      // // this.accountCreated = true
     }
   }
 }
