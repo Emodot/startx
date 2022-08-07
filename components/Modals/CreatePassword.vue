@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 export default {
   props: {
     actionData: {
@@ -70,23 +70,23 @@ export default {
     },
     resetPassword () {
       this.loading = true
-      this.$axios.$post('/reset_password', {
-        resetCode: this.code,
-        newpassword: this.password
-      }, {
-        headers: {
-          Authorization: `Bearer ${Cookies.get('token')}`
-        }
-      }).then((response) => {
-        // console.log(response)
-        if (!response.error) {
-          this.$toast.success(response.statusText)
-          this.window.location.reload()
-        } else {
-          this.$toast.error(response.errorMsg)
-        }
-        // this.$emit('sentInst')
-      })
+      // this.$axios.$post('/reset_password', {
+      //   resetCode: this.code,
+      //   newpassword: this.password
+      // }, {
+      //   headers: {
+      //     Authorization: `Bearer ${Cookies.get('token')}`
+      //   }
+      // }).then((response) => {
+      //   // console.log(response)
+      //   if (!response.error) {
+      //     this.$toast.success(response.statusText)
+      //     this.window.location.reload()
+      //   } else {
+      //     this.$toast.error(response.errorMsg)
+      //   }
+      //   // this.$emit('sentInst')
+      // })
     }
   }
 }
