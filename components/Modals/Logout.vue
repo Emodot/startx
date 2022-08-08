@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 export default {
   data () {
     return {
@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     logOut () {
-      Cookies.remove('token')
+      // Cookies.remove('token')
       // Cookies.remove('first_name')
       // Cookies.remove('last_name')
       // Cookies.remove('email')
