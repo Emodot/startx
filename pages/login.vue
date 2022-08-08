@@ -94,7 +94,7 @@ export default {
     }
   },
   created () {
-    this.publicToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdhOGUxZDliMjVkMThiZjVhNDRmZWQiLCJpYXQiOjE2NTIxOTg5NDF9.AkpFM_-Fz0DcZXSnVKq_4CHjyz4dLnkjaepkcq5Qp20'
+    // this.publicToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdhOGUxZDliMjVkMThiZjVhNDRmZWQiLCJpYXQiOjE2NTIxOTg5NDF9.AkpFM_-Fz0DcZXSnVKq_4CHjyz4dLnkjaepkcq5Qp20'
   },
   methods: {
     showHide () {
