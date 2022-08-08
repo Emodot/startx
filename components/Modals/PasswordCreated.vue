@@ -41,7 +41,7 @@ export default {
   },
   data () {
     return {
-      userEmail: 'acumen@mail.com'
+      // userEmail: 'acumen@mail.com'
     }
   }
 }
