@@ -112,5 +112,20 @@ export default {
   .container {
     padding: 20px;
   }
+
+  .inner {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 20px;
+  }
+
+  .inner-tab {
+    margin-top: 30px;
+    overflow: auto;
+  }
+
+  .inner .tab {
+    margin-right: 30px;
+  }
 }
 </style>
