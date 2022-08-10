@@ -208,5 +208,9 @@ textarea {
   .add-btn {
     margin-bottom: 30px;
   }
+
+  .content-title {
+    margin-top: 20px;
+  }
 }
 </style>
