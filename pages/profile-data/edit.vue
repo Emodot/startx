@@ -127,5 +127,9 @@ export default {
   .inner .tab {
     margin-right: 30px;
   }
+
+  .row {
+    flex-direction: column;
+  }
 }
 </style>

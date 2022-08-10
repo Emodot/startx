@@ -228,4 +228,19 @@ export default {
   border-radius: 20px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .input-ctn {
+    margin-bottom: 20px;
+  }
+
+  .bottom-btn {
+    margin-top: 2rem;
+  }
+}
 </style>
