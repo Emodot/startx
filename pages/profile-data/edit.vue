@@ -107,4 +107,10 @@ export default {
 .tab-1 {
   padding-top: 3rem;
 }
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+}
 </style>
