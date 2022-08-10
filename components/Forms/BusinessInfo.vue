@@ -322,6 +322,11 @@ textarea {
 
   .no-show {
     margin-bottom: 0;
+    display: none;
+  }
+
+  .add-btn {
+    margin-bottom: 30px;
   }
 }
 </style>
