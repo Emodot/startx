@@ -124,6 +124,17 @@ export default {
     overflow: auto;
   }
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+  .inner-tab::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .inner-tab {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
   .inner .tab {
     margin-right: 30px;
   }
