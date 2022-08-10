@@ -305,4 +305,23 @@ textarea {
   width: 100%;
   padding: 20px;
 }
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .input-ctn {
+    margin-bottom: 20px;
+  }
+
+  .bottom-btn {
+    margin-top: 2rem;
+  }
+
+  .no-show {
+    margin-bottom: 0;
+  }
+}
 </style>
