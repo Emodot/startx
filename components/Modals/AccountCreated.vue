@@ -54,10 +54,10 @@ export default {
 </script>
 
 <style scoped>
-* {
+/* * {
   font-family: 'Poppins', sans-serif;
   color: #454545;
-}
+} */
 .modal-backdrop-2 {
   z-index: 7;
   position: fixed;
