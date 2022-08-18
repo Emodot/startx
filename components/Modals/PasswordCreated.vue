@@ -19,9 +19,6 @@
             Dashboard
           </button>
         </div>
-        <!-- <p class="text" @click="$router.push('/')">
-          Go Home
-        </p> -->
       </div>
     </div>
   </div>
@@ -41,7 +38,6 @@ export default {
   },
   data () {
     return {
-      // userEmail: 'acumen@mail.com'
     }
   }
 }
