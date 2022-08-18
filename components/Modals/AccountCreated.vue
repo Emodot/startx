@@ -26,7 +26,7 @@
           </button>
         </div>
         <p class="text" @click="$router.push('/')">
-          Go to Dashboard
+          Dashboard
         </p>
       </div>
     </div>
