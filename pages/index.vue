@@ -58,11 +58,11 @@ export default {
       cards: [
         {
           name: 'Total Data Uploads',
-          number: '524'
+          number: '564'
         },
         {
           name: 'Total Amount Subscribed',
-          number: '45,791'
+          number: '25,791'
         },
         {
           name: 'Subscription Plan',
