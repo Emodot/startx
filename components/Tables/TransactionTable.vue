@@ -140,18 +140,6 @@ export default {
     //     this.transactions = response.data
     //   })
     // },
-    // getPaymentHistory () {
-    //   // this.transLoading = true
-    //   this.$axios.$get('/payment_history/', {
-    //     headers: {
-    //       Authorization: `Bearer ${Cookies.get('token')}`
-    //     }
-    //   }).then((response) => {
-    //     // console.log(response)
-    //     // this.transLoading = false
-    //     // this.transactions = response.data
-    //   })
-    // }
   }
 }
 </script>
