@@ -125,7 +125,6 @@ export default {
   },
   created () {
     // this.getTransactions()
-    // this.getPaymentHistory()
   },
   methods: {
     // getTransactions () {
