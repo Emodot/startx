@@ -50,9 +50,6 @@
             <p class="plan-name">
               Yearly
             </p>
-            <!-- <p class="popular">
-              Most Popular
-            </p> -->
           </div>
           <p class="points">
             Lorem ipsum dolor sit amet
