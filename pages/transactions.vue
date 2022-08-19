@@ -34,9 +34,6 @@
           <p class="click">
             Click the button to change your Subscription Plan
           </p>
-          <!-- <p class="pdf-only">
-            (.pdf document only)
-          </p> -->
           <div class="upload-btn">
             <button @click="newMagazine = true">
               Change Plan
