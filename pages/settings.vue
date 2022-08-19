@@ -31,9 +31,6 @@
           <p class="head">
             Change Account Details
           </p>
-          <!-- <p class="sub-head">
-            Automate notifications and provide support through our omni-channel SMS API
-          </p> -->
           <div class="input-box">
             <p class="label">
               First Name
