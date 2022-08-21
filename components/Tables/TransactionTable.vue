@@ -189,7 +189,7 @@ export default {
   background-color: #ffffff;
   border-radius: 10px;
   width: 100%;
-  /* border: 1px solid #1A2440; */
+  /* border: 1px solid #1A240; */
 }
 table, th, td {
   /* border: 1px solid #fff; */
