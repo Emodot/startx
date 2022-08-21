@@ -32,9 +32,6 @@
             Reset password
           </button>
         </div>
-        <!-- <p class="text" @click="$emit('close-modal')">
-          Cancel
-        </p> -->
       </div>
     </div>
   </div>
