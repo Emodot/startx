@@ -266,8 +266,6 @@ input {
 
 .password-input input {
   border: none;
-  /* position: relative; */
-  /* bottom: 10px; */
   width: 100%;
   height: 20px;
   font-size: 15px;
@@ -280,8 +278,6 @@ input {
   align-items: center;
   border: 1px solid #4b545a38;
   border-radius: 5px;
-  /* position: relative; */
-  /* bottom: 10px; */
   width: 100%;
   height: 50px;
   /* font-size: 15px; */
